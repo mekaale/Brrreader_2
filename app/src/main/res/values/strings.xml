@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Brrreader</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_read">read</string>
+    <string name="title_activity_edu">edu</string>
+    <string name="title_activity_ganada">Ganada</string>
+    <string name="tap_on_mic">Tap on mic to speak</string>
+
+</resources>
