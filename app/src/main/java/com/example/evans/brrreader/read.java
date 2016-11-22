@@ -118,10 +118,10 @@ public class read extends Activity implements View.OnClickListener,TextToSpeech.
                 PackageManager.FEATURE_CAMERA)) {
             // Open default camera
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+            //intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
 
             // start the image capture Intent
-            startActivityForResult(intent, 100);
+            //startActivityForResult(intent, 100);
 
         } else {
             Toast.makeText(getApplication(), "Camera not supported", Toast.LENGTH_LONG).show();
