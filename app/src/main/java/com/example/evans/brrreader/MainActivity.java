@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import org.opencv.core.Mat;
+
 public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 private static TextToSpeech tts;
 
@@ -88,6 +90,32 @@ private static TextToSpeech tts;
     protected void onDestroy() {
         super.onDestroy();
         tts.shutdown();
+    }
+
+    public static int Braille(Mat image){
+        int total=0;
+
+        int one_x=image.rows()/4, one_y=image.cols()/4;
+        int two_x=image.rows()/2, two_y=image.cols()/4;
+        int three_x=(int)(image.rows()/1.4), three_y=image.cols()/4;
+        int four_x=image.rows()/4, four_y=(int)(image.cols()/1.4);
+        int five_x=image.rows()/2, five_y=(int)(image.cols()/1.4);
+        int six_x=(int)(image.rows()/1.4), six_y=(int)(image.cols()/1.4);
+
+        if(image.get(one_x,one_y)[0]<100)
+            total+=1;
+        if(image.get(two_x,two_y)[0]<100)
+            total+=2;
+        if(image.get(three_x,three_y)[0]<100)
+            total+=4;
+        if(image.get(four_x,four_y)[0]<100)
+            total+=8;
+        if(image.get(five_x,five_y)[0]<100)
+            total+=16;
+        if(image.get(six_x,six_y)[0]<100)
+            total+=32;
+
+        return total;
     }
 
 }
