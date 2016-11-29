@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import org.opencv.imgcodecs.Imgcodecs;
+
 public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 private static TextToSpeech tts;
 
@@ -24,7 +26,17 @@ private static TextToSpeech tts;
         tts = new TextToSpeech(this,this);
         Button speakbutton = (Button) findViewById(R.id.button);
         Button edubutton = (Button)findViewById(R.id.button2);
+        Button test = (Button)findViewById(R.id.button3);
 
+
+
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),readtest.class);
+                startActivity(i);
+            }
+        });
         speakbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,7 +87,7 @@ private static TextToSpeech tts;
     public void speak(){
 
         String str1 = "  메인 페이지에 접속하셨습니다.";
-        tts.speak(str1,TextToSpeech.QUEUE_FLUSH,null);
+        tts.speak(str1, TextToSpeech.QUEUE_FLUSH, null);
 
     }
     @Override
@@ -89,5 +101,7 @@ private static TextToSpeech tts;
         super.onDestroy();
         tts.shutdown();
     }
+
+
 
 }

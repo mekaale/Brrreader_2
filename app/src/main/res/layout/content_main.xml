@@ -29,6 +29,13 @@
                 android:textSize="25dp" />
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/button3"
+                android:layout_gravity="bottom" />
+
+            <Button
                 android:layout_width="200dp"
                 android:layout_height="300dp"
                 android:text="점자교육모드"
@@ -43,7 +50,7 @@
                 android:text="BR_reader에 오신것을 환영합니다"
                 android:id="@+id/textView"
                 android:textSize="23dp"
-                android:layout_marginLeft="-350dp" />
+                android:layout_marginLeft="-360dp" />
 
         </LinearLayout>
     </FrameLayout>

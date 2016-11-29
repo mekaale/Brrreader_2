@@ -37,7 +37,7 @@ import it.sauronsoftware.ftp4j.FTPClient;
 import it.sauronsoftware.ftp4j.FTPDataTransferListener;
 
 
-public class read extends Activity implements View.OnClickListener,TextToSpeech.OnInitListener {
+public class read extends Activity implements TextToSpeech.OnInitListener {
 
     Button btpic, btnup;
     private Uri fileUri;
@@ -45,6 +45,7 @@ public class read extends Activity implements View.OnClickListener,TextToSpeech.
     Uri selectedImage;
     Bitmap photo;
     String ba1;
+    String str2 = "5초 후 점자 인식을 시작합니다.";
     private static TextToSpeech tts;
 
     public static String URL = "ftp://192.168.0.18/picture.php";
@@ -62,38 +63,32 @@ public class read extends Activity implements View.OnClickListener,TextToSpeech.
         btpic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickpic();
+
+                tts.speak(str2,TextToSpeech.QUEUE_FLUSH,null);
+                final long changeTime = 5000L;
+
+                btnup.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        clickpic();
+                    }
+                }, changeTime);
             }
         });
 
 
-    }
+        btnup = (Button) findViewById(R.id.up);
+        btnup.setOnClickListener(new View.OnClickListener(){
 
-    public void uploadFile(File fileName){
-
-
-        FTPClient client = new FTPClient();
-        Log.e("path", "----------------" + picturePath);
-
-        try {
-
-            client.connect(FTP_HOST, 21);
-            client.login(FTP_USER, FTP_PASS);
-            client.setType(FTPClient.TYPE_BINARY);
-            client.changeDirectory("/uploads/UploadToServer.php");
-
-            //client.upload(fileName, new MyTransferListener());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            try {
-                client.disconnect(true);
-            } catch (Exception e2) {
-                e2.printStackTrace();
+            @Override
+            public void onClick(View view) {
+                upload();
             }
-        }
-
+        });
     }
+
+
     private void upload() {
         // Image location URL
         Log.e("path", "----------------" + picturePath);
@@ -151,24 +146,11 @@ public class read extends Activity implements View.OnClickListener,TextToSpeech.
         }
     }
 
-    @Override
-    public void onClick(View view) {
 
-        btnup = (Button) findViewById(R.id.up);
-        btnup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                File f = new File(picturePath);
-                uploadFile(f);
-            }
-        });
-
-    }
 
     public void speak(){
 
-        String str1 = "  점자 읽기 페이지입니다.";
+        String str1 = "  점자 읽기 페이지입니다. 스마트 폰과 책 사이의 거리를 50cm 정도로 조정하시고 책이 정위치에 위치하였는지 확인하신 후 화면을 클릭해 주세요.";
         tts.speak(str1, TextToSpeech.QUEUE_FLUSH, null);
 
     }

@@ -18,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="26dp"
         android:textStyle="normal" />
 
@@ -31,13 +31,6 @@
         android:gravity="center"
         android:orientation="vertical"
         android:id="@+id/linearLayout">
-
-        <ImageButton
-            android:id="@+id/btnSpeak"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:src="@drawable/mic" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,4 +51,14 @@
         android:layout_alignRight="@+id/linearLayout"
         android:layout_alignEnd="@+id/linearLayout"
         android:textSize="30dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnspeak"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mic"
+        android:layout_marginBottom="20dp" />
+
 </RelativeLayout>

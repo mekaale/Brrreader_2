@@ -32,11 +32,37 @@
         <uses-feature
             android:name="android.hardware.Camera"
             android:required="true" />
+        <uses-feature android:name="android.hardware.camera2.full" />
 
         <uses-permission android:name="android.permission.CAMERA" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.CAMERA." />
 
+        <activity
+            android:name=".ganada2"
+            android:label="@string/title_activity_ganada2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ganada3"
+            android:label="@string/title_activity_ganada3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ganada4"
+            android:label="@string/title_activity_ganada4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ganada5"
+            android:label="@string/title_activity_ganada5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ganada"
+            android:label="@string/title_activity_ganada"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".readtest"
+            android:label="@string/title_activity_readtest"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
