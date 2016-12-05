@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.evans.brrreader">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.camera2.full" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -20,6 +21,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -37,16 +39,8 @@
             android:required="true" />
 
         <activity
-            android:name=".ganada2"
-            android:label="@string/title_activity_ganada2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".ganada3"
             android:label="@string/title_activity_ganada3"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ganada4"
-            android:label="@string/title_activity_ganada4"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ganada5"
@@ -59,6 +53,10 @@
         <activity
             android:name=".readtest"
             android:label="@string/title_activity_readtest"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ganada_1"
+            android:label="@string/title_activity_ganada_1"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -75,13 +75,12 @@ public class edu extends AppCompatActivity implements TextToSpeech.OnInitListene
 
     public void speak(){
 
-        String str1 = "  교육 페이지에 접속 하셨습니다. 저희 비알 리더에서는 총 여섯 가지의 교육 시나리오를 제공합니다." +
+        String str1 = "  교육 페이지에 접속 하셨습니다. 저희 비알 리더에서는 총 세가지의 교육 시나리오를 제공합니다." +
                 "잘 들으시고 원하시는 교육 시나리오에 해당 하는 번호를 말씀 해 주세요.                               " +
                 "     1번 자음 모음 익히기.                  " +
-                "     2번 글자 익히기.                       " +
-                "     3번 단어 익히기.                       " +
-                "     4번 줄임말 익히기.                     " +
-                "     5번 문장 익히기. ";
+                "     2번 단어 익히기.                       " +
+                "     3번 문장                       " ;
+
         tts.speak(str1, TextToSpeech.QUEUE_FLUSH, null);
 
     }
@@ -123,26 +122,17 @@ public class edu extends AppCompatActivity implements TextToSpeech.OnInitListene
                     else if(txtSpeechInput.getText().toString().equals("이번"))
                     {
                         txtSpeechInput.setText("2번");
-                        Intent i = new Intent(getApplicationContext(),ganada2.class);
-                        startActivity(i);
-                    }
-                    else if(txtSpeechInput.getText().toString().equals("3번"))
-                    {
                         Intent i = new Intent(getApplicationContext(),ganada3.class);
                         startActivity(i);
                     }
 
-                    if(txtSpeechInput.getText().toString().equals("4번"))    //비교를 통해 교육 시나리오로 이동
-                    {
-                        Intent i = new Intent(getApplicationContext(),ganada4.class);
-                        startActivity(i);
-                    }
 
-                    if(txtSpeechInput.getText().toString().equals("5번"))    //비교를 통해 교육 시나리오로 이동
+                    if(txtSpeechInput.getText().toString().equals("3번"))    //비교를 통해 교육 시나리오로 이동
                     {
                         Intent i = new Intent(getApplicationContext(),ganada5.class);
                         startActivity(i);
                     }
+
 
                 }
                 break;

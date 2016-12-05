@@ -432,7 +432,7 @@ public class read extends Activity implements TextToSpeech.OnInitListener {
             @Override
             public void onClick(View view) {
 
-                tts.speak(str2,TextToSpeech.QUEUE_FLUSH,null);
+                tts.speak(str2, TextToSpeech.QUEUE_FLUSH, null);
                 final long changeTime = 5000L;
 
                 btnup.postDelayed(new Runnable() {
@@ -440,8 +440,11 @@ public class read extends Activity implements TextToSpeech.OnInitListener {
                     public void run() {
 
                         clickpic();
+
+
                     }
                 }, changeTime);
+
             }
         });
 
@@ -477,6 +480,7 @@ public class read extends Activity implements TextToSpeech.OnInitListener {
 
     private void clickpic() {
         // Check Camera
+
         if (getApplicationContext().getPackageManager().hasSystemFeature(
                 PackageManager.FEATURE_CAMERA)) {
             // Open default camera
@@ -511,6 +515,12 @@ public class read extends Activity implements TextToSpeech.OnInitListener {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             ImageView imageView = (ImageView) findViewById(R.id.Imageprev);
             imageView.setImageBitmap(photo);
+
+
+            Intent i = new Intent(read.this,readtest.class);
+            i.putExtra("picturepath",picturePath);
+            startActivity(i);
+
         }
     }
 
