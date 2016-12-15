@@ -57,6 +57,38 @@
         <activity
             android:name=".ganada_1"
             android:label="@string/title_activity_ganada_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ganada_2"
+            android:label="@string/title_activity_ganada_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ganada_3"
+            android:label="@string/title_activity_ganada_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity_ganada_1_test"
+            android:label="@string/title_activity_activity_ganada_1_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity_ganada_2_test"
+            android:label="@string/title_activity_activity_ganada_2_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity_ganada_3_test"
+            android:label="@string/title_activity_activity_ganada_3_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ganada_1_1test"
+            android:label="@string/title_activity_ganada_1_1test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".final_ganada"
+            android:label="@string/title_activity_final_ganada"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".cong"
+            android:label="@string/title_activity_cong"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

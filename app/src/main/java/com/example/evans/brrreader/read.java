@@ -432,7 +432,6 @@ public class read extends Activity implements TextToSpeech.OnInitListener {
             @Override
             public void onClick(View view) {
 
-                tts.speak(str2, TextToSpeech.QUEUE_FLUSH, null);
                 final long changeTime = 5000L;
 
                 btnup.postDelayed(new Runnable() {
@@ -445,6 +444,10 @@ public class read extends Activity implements TextToSpeech.OnInitListener {
                     }
                 }, changeTime);
 
+                tts.speak("카메라가 실행됩니다.", TextToSpeech.QUEUE_FLUSH, null);
+
+                tts.speak("점자 인식에 시간이 좀 걸릴수도 있습니다.",TextToSpeech.QUEUE_ADD,null);
+
             }
         });
 
@@ -454,6 +457,7 @@ public class read extends Activity implements TextToSpeech.OnInitListener {
 
             @Override
             public void onClick(View view) {
+
                 upload();
             }
         });

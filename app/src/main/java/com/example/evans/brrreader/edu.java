@@ -79,7 +79,7 @@ public class edu extends AppCompatActivity implements TextToSpeech.OnInitListene
                 "잘 들으시고 원하시는 교육 시나리오에 해당 하는 번호를 말씀 해 주세요.                               " +
                 "     1번 자음 모음 익히기.                  " +
                 "     2번 단어 익히기.                       " +
-                "     3번 문장                       " ;
+                "     3번 문장 익히기                     " ;
 
         tts.speak(str1, TextToSpeech.QUEUE_FLUSH, null);
 
@@ -149,6 +149,7 @@ public class edu extends AppCompatActivity implements TextToSpeech.OnInitListene
     }
     @Override
     public void onInit(int i) {
+
         speak();
     }
     protected void onDestroy() {

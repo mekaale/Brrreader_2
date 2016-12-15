@@ -1,5 +1,6 @@
 package com.example.evans.brrreader;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
@@ -35,6 +36,7 @@ public class ganada5 extends AppCompatActivity implements TextToSpeech.OnInitLis
 
         String str = "  문장 익히기  테스트  입니다.";
         tts.speak(str, TextToSpeech.QUEUE_FLUSH, null);
+        Intent i = new Intent(getApplicationContext(),ganada_3.class);
 
     }
     @Override

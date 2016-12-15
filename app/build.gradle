@@ -10,6 +10,7 @@ android {
         targetSdkVersion 20
         versionCode 1
         versionName "1.0"
+
     }
     buildTypes {
         release {
@@ -30,5 +31,6 @@ dependencies {
     compile 'com.android.support:support-v4:25.0.1'
     compile 'com.android.support:support-v13:25.0.1'
     compile project(':openCVLibrary2411')
+
 
 }

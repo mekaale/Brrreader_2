@@ -1,5 +1,6 @@
 package com.example.evans.brrreader;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
@@ -18,17 +19,11 @@ public class ganada_1 extends AppCompatActivity implements TextToSpeech.OnInitLi
     private TextToSpeech tts5;
 
 
-    String s3 =   "우측 첫 번째 점자는 니은 입니다." ;
-    String s4 = "좌측 두번 째 점자는 디귿입니다." ;
-    String s5 =  "우측 두번 째 점자는 리을 입니다." ;
-    String s6=     "좌측 세 번째 점자는 미음 입니다." ;
-    String s7=   "우측 세 번째 점자는 비읍 입니다." ;
-    String s8="한 번 더 반복하겠습니다. 좌측 첫 번째 점자는 기억 입니다." ;
-    String s9="우측 첫 번째 점자는 니은 입니다." ;
-    String s10="좌측 두번 째 점자는 디귿입니다." ;
-    String s11="우측 두번 째 점자는 리을 입니다." ;
-    String s12= "좌측 세 번째 점자는 미음 입니다." ;
-    String s13="우측 세 번째 점자는 비읍 입니다." ;
+    String s3 =   "우측 첫 번째 점자는 일점, 사점,  니은 입니다." ;
+    String s4 = "좌측 두번 째 점자는 이점, 사점,  디귿입니다." ;
+    String s5 =  "우측 두번 째 점자는 오점,  리을 입니다." ;
+    String s6=     "좌측 세 번째 점자는 일점, 오점, 미음 입니다." ;
+    String s7=   "우측 세 번째 점자는 사점, 오점, 비읍 입니다." ;
     String s14 = "교육을 완료 했습니다. 테스트를 진행합니다.";
 
     public int count = 0;
@@ -80,43 +75,11 @@ public class ganada_1 extends AppCompatActivity implements TextToSpeech.OnInitLi
                     count ++;
                 }
 
-                else if(count == 5)
-                {
-                    tts5.speak(s8,TextToSpeech.QUEUE_ADD,null);
-                    count ++;
-                }
-
-                else if(count == 6)
-                {
-                    tts5.speak(s9,TextToSpeech.QUEUE_ADD,null);
-                    count ++;
-                }
-
-                else if(count == 7)
-                {
-                    tts5.speak(s10,TextToSpeech.QUEUE_ADD,null);
-                    count ++;
-                }
-                else if(count == 8)
-                {
-                    tts5.speak(s11,TextToSpeech.QUEUE_ADD,null);
-                    count ++;
-                }
-                else if(count == 9)
-                {
-                    tts5.speak(s12,TextToSpeech.QUEUE_ADD,null);
-                    count ++;
-                }
-                else if(count == 10)
-                {
-                    tts5.speak(s13,TextToSpeech.QUEUE_ADD,null);
-                    count ++;
-                }
-
                 else
                 {
                     tts5.speak(s14,TextToSpeech.QUEUE_ADD,null);
-
+                    Intent i = new Intent(getApplicationContext(), activity_ganada_1_test.class);
+                    startActivity(i);
                 }
             }
         });
@@ -144,7 +107,7 @@ public class ganada_1 extends AppCompatActivity implements TextToSpeech.OnInitLi
     public void speak()
     {
         String s1 = "자음 모음 교육 카드를 펼쳐주세요.";
-        String s2 = " 좌측 첫 번째 점자는 기억 입니다." ;
+        String s2 = " 좌측 첫 번째 점자는 사점, 기억 입니다." ;
 
 
         tts.speak(s1,TextToSpeech.QUEUE_FLUSH,null);

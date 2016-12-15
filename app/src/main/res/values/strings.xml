@@ -20,5 +20,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_ganada_1">ganada_1</string>
+    <string name="title_activity_ganada_2">ganada_2</string>
+    <string name="title_activity_ganada_3">ganada_3</string>
+    <string name="title_activity_activity_ganada_1_test">activity_ganada_1_test</string>
+    <string name="title_activity_activity_ganada_2_test">activity_ganada_2_test</string>
+    <string name="title_activity_activity_ganada_3_test">activity_ganada_3_test</string>
+    <string name="title_activity_ganada_1_1test">ganada_1_1test</string>
+    <string name="title_activity_final_ganada">final_ganada</string>
+    <string name="title_activity_cong">cong</string>
 
 </resources>

@@ -9,7 +9,61 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.evans.brrreader.ganada3"
-    tools:showIn="@layout/activity_ganada3">
+    tools:context="com.example.evans.brrreader.ganada"
+    tools:showIn="@layout/activity_ganada6">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="190dp"
+            android:layout_height="350dp"
+            android:id="@+id/imageButton100"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/jaem" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="350dp"
+            android:id="@+id/imageButton200"
+            android:scaleType="fitCenter"
+            android:background="@null"
+
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/test" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="교육"
+            android:id="@+id/textView3"
+            android:layout_gravity="left|bottom"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:id="@+id/textView4"
+            android:layout_gravity="right|bottom"
+            android:textSize="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="50dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.단어 익히기"
+            android:id="@+id/textView55"
+            android:layout_gravity="left|top"
+            android:textStyle="bold"
+            android:textSize="30dp" />
+    </FrameLayout>
 </RelativeLayout>
